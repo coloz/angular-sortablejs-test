@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Drag / drop the item</h2>
+  <div [sortablejs]="items" [sortablejsOptions]="options">
+    <div *ngFor="let item of items">{{ item }}</div>
+  </div>
+  <h2>tap button,browser will show "TypeError: Cannot read property 'ownerDocument' of null"</h2>
+  <button ion-button (click)="logout()">logout</button>
+</ion-content>
